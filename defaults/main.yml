@@ -1,0 +1,5 @@
+watchtower_enabled: yes
+
+watchtower_image: centurylink/watchtower
+watchtower_follow: ""
+watchtower_options: ""
