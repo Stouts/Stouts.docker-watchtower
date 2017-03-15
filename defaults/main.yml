@@ -1,5 +1,7 @@
 watchtower_enabled: yes
 
-watchtower_image: centurylink/watchtower
+watchtower_image: v2tec/watchtower
 watchtower_follow: ""
-watchtower_options: ""
+watchtower_options: "--cleanup"
+
+watchtower_config: {}
