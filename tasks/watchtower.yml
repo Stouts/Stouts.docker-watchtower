@@ -1,13 +1,9 @@
 ---
-
-- name: Setup configuration for watchtower
-  template: src=docker.json dest=/etc/watchtower.json
-
 - name: Run docker-watchtower
-  docker:
+  docker_container:
     command: "{{watchtower_options}} {{watchtower_follow}}"
     image: "{{watchtower_image}}"
     name: watchtower
     restart_policy: always
-    state: reloaded
-    volumes: ["/var/run/docker.sock:/var/run/docker.sock", "/etc/watchtower.json:/config.json"]
+    restart: true
+    volumes: "{{watchtower_volumes}}"

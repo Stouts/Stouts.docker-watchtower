@@ -3,5 +3,6 @@ watchtower_enabled: yes
 watchtower_image: v2tec/watchtower
 watchtower_follow: ""
 watchtower_options: "--cleanup"
-
-watchtower_config: {}
+watchtower_volumes:
+- "/var/run/docker.sock:/var/run/docker.sock"
+- "/root/.docker/config.json:/config.json"

@@ -1,5 +1,5 @@
 ---
 
-- include: watchtower.yml
+- import_tasks: watchtower.yml
   when: watchtower_enabled
   tags: [docker-watchtower]
