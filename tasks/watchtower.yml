@@ -4,6 +4,7 @@
     command: "{{watchtower_options}} {{watchtower_follow}}"
     image: "{{watchtower_image}}"
     name: watchtower
-    restart_policy: always
+    pull: true
     restart: true
+    restart_policy: always
     volumes: "{{watchtower_volumes}}"
